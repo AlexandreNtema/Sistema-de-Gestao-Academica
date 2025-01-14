@@ -3,7 +3,10 @@ package View;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
+/**
+ *
+ * @author Alexandre Ntema
+ */
 public class LoginScreen extends JFrame {
 
     private JTextField usernameField;
