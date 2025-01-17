@@ -108,8 +108,11 @@ public class LoginScreen extends JFrame {
         if (username.isEmpty() || password.isEmpty()) {
             showMessage("Por favor, preencha todos os campos.", "Erro de Login", JOptionPane.ERROR_MESSAGE);
         } else {
+            new HomeEstudante().setVisible(true);
+            dispose();
+
             // TODO: Implement actual authentication logic
-            showMessage("Implementar lógica de autenticação aqui", "Info", JOptionPane.INFORMATION_MESSAGE);
+            //showMessage("Implementar lógica de autenticação aqui", "Info", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
@@ -118,17 +121,7 @@ public class LoginScreen extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            setSystemLookAndFeel();
             new LoginScreen().setVisible(true);
-        });
     }
 
-    private static void setSystemLookAndFeel() {
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }
